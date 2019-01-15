@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12 col-md-4 centered">
+          <div class="card ">
+              <div class="card-body bg-standard text-dark">
+                  <div class="login-panel panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title text-white text-center">Home</h3>
+                      </div>
+                      <hr class="border-bottom-color">
+                      <div class="panel-body">
+                          <form #logInForm="ngForm" novalidate>
+                              <fieldset>
+                                  <div class="form-group">
+                                      <input class="form-control" placeholder="Enter Mobile Number" name="phone" type="text"
+                                          autofocus="" maxlength="10" [(ngModel)]="mobile">
+                                  </div>
+                                  <div class="form-group">
+                                      <input class="form-control" placeholder="Enter PINCODE " name="pincode" type="text"
+                                          value="" [(ngModel)]="pincode">
+                                  </div>
+                                  <div class="text-center">
+                                      <div class="form-check-inline">
+                                          <label class="form-check-label text-white">
+                                              <input type="radio" class="form-check-input " checked="checked"
+                                                  name="schooltype" id="schooltype"  [(ngModel)]="schooltype" value="Institute">Institute
+                                          </label>
+                                      </div>
+                                      <div class="form-check-inline text-white">
+                                          <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="schooltype"  id="schooltype" value="Organisation" [(ngModel)]="schooltype">Organisation
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <hr class="border-bottom-color">
+                                  <p class=" text-center mt-3">
+                                      <a  class="btn btn-md btn-primary" (click)="doLogin(logInForm.value)">Login</a>
+                                      <a  class="btn btn-md btn-success" (click)="doRagistration()">Register</a>
+                                  </p>
+                              </fieldset>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

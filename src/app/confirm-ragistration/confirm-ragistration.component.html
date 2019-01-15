@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row  ">
+      <div class=" col-sm-12 col-md-5  col-xl-3 center-block mx-auto centered">
+          <div class="card ">
+              <div class="card-body bg-standard text-dark">
+                  <div class="login-panel panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title text-white text-center">Confirm Ragistration</h3>
+                      </div>
+                      <hr class="border-bottom-color">
+                      <div class="panel-body">
+                          <form class="form-horizontal" #ConfirmRagistration="ngForm">
+                              <div class="col-md-12">
+                                  <div class="form-group">
+                                      <div class="row">
+                                          <label class="col-md-12 control-label text-white" for="textinput">
+                                              Your account has been credited Please check your SMS / E-mail for
+                                              PIN CODE</label>
+                                      </div>
+                                      <div class="row mt-2">
+
+                                          <label class="col-md-4 control-label text-white" for="textinput">
+                                              A/C PIN</label>
+
+                                          <div class="col-md-8">
+                                              <input id="pincode" name="pincode" type="text" placeholder="PIN CODE"
+                                                  class="form-control input-md" [(ngModel)]="pincode">
+
+                                                  
+                                          </div>
+
+                                          <input type="hidden" name="phone" [(ngModel)]="phone">
+                                      </div>
+
+
+                                      
+                                  </div>
+                                  <hr class="border-bottom-color">
+                                  <p class=" text-center mt-3">
+                                      <a  class="btn btn-md btn-success" (click)="RagistrationConfirm(ConfirmRagistration.value)">Confirm</a>
+                                  </p>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+<div class="container">
+  <div class="row  ">
+    <div class="col-sm-12 col-md-6 offset-md-3 mt-5 ">
+      <div class="card ">
+        <div class="card-body bg-standard text-dark">
+          <div class="login-panel panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title text-white text-center">Ragister</h3>
+            </div>
+            <hr class="border-bottom-color">
+            <div class="panel-body">
+              <form class="form-horizontal"
+                    #ragistrationForm="ngForm">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-4 control-label text-white"
+                             for="textinput">Register
+                        Mobile </label>
+                      <div class="col-md-8">
+                        <input #phoneref="ngModel"
+                               required
+                               id="phone"
+                               name="phone"
+                               type="text"
+                               placeholder="Enter Register Mobile"
+                               class="form-control input-md"
+                               [(ngModel)]="phone"
+                               autocomplete="off"
+                               number>
+                        <p *ngIf="phoneref.errors?.number"
+                           class="alert alert-danger">Enter Mobile Number</p>
+                        <p *ngIf="phoneref.invalid && phoneref.dirty"
+                           class="alert alert-danger">required</p>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-4 control-label text-white"
+                             for="textinput">Organisation
+                      </label>
+                      <div class="col-md-8">
+                        <input #organisationref="ngModel"
+                               
+                               id="organisation"
+                               name="organisation"
+                               type="text"
+                               placeholder="Enter Organisation"
+                               class="form-control input-md"
+                               [(ngModel)]="organisation">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-4 control-label text-white"
+                             for="textinput">First
+                        Name</label>
+                      <div class="col-md-8">
+                        <input id="firstname"
+                               name="firstname"
+                               type="text"
+                               placeholder="Enter first Name"
+                               class="form-control input-md"
+                               [(ngModel)]="firstname">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-4 control-label text-white"
+                             for="textinput">Last
+                        Name</label>
+                      <div class="col-md-8">
+                        <input id="lastname"
+                               name="lastname"
+                               type="text"
+                               placeholder="Enter Last Name"
+                               class="form-control input-md"
+                               [(ngModel)]="lastname">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-4 control-label text-white"
+                             for="textinput">Email
+                      </label>
+                      <div class="col-md-8">
+                        <input id="Email"
+                               name="Email"
+                               type="text"
+                               placeholder="Enter Email"
+                               class="form-control input-md"
+                               [(ngModel)]="email">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-4 control-label text-white"
+                             for="textinput">Date
+                        Of Birth
+                      </label>
+                      <div class="col-md-8">
+                        <input id="birthdate"
+                               name="birthdate"
+                               type="date"
+                               placeholder="Enter Date Of Birth"
+                               class="form-control input-md"
+                               [(ngModel)]="birthdate">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-4 control-label text-white"
+                             for="textinput">City
+                      </label>
+                      <div class="col-md-8">
+                        <select id="cityname"
+                                name="cityname"
+                                class="form-control"
+                                [(ngModel)]="cityname">
+                          <option [ngValue]="undefined"
+                                  disabled>Select City</option>
+                          <option *ngFor="let city of citys"
+                                  [ngValue]="city">{{city}}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="border-bottom-color">
+                  <p class=" text-center mt-3">
+
+                    <!-- <a   class="btn btn-md btn-success" (click)=ConfirmRagistration(ragistrationForm.value)>Register</a>
+                                   -->
+                    <button type="button"
+                            class="btn btn-primary mt-3 float-right"
+                            [disabled]="ragistrationForm.invalid"
+                            (click)=ConfirmRagistration(ragistrationForm.value)>Register</button>
+                  </p>
+
+
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

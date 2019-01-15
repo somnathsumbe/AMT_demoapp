@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row  ">
+      <div class=" col-sm-12 col-md-5   col-lg-4 center-block mx-auto mt-5">
+          <div class="card ">
+              <div class="card-body bg-standard text-dark">
+                  <div class="login-panel panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title text-white text-center">Change your PIN</h3>
+                      </div>
+                      <hr class="border-bottom-color">
+                      <div class="panel-body">
+                          <form class="form-horizontal"  #changeyourpin="ngForm">
+                              <div class="col-md-12">
+                                  <div class="form-group">
+                                      <div class="row">
+                                          <label class="col-md-6 control-label text-white" for="textinput">
+                                              Current PIN</label>
+
+                                          <div class="col-md-6">
+                                              <input id="currentpin" name="currentpin" type="text" placeholder="PIN CODE"
+                                                  class="form-control input-md" [(ngModel)]="currentpin">
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <div class="row">
+                                          <label class="col-md-6 control-label text-white" for="textinput">
+                                              New PIN</label>
+
+                                          <div class="col-md-6">
+                                              <input id="newpin" name="newpin" type="text" placeholder="PIN CODE"
+                                                  class="form-control input-md" [(ngModel)]="newpin">
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="form-group">
+                                      <div class="row">
+                                          <label class="col-md-6 control-label text-white" for="textinput">
+                                              Confirm PIN</label>
+
+                                          <div class="col-md-6">
+                                              <input id="confirmpin" name="confirmpin" type="text" placeholder="PIN CODE"
+                                                  class="form-control input-md" [(ngModel)]="confirmpin">
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  
+                                  <hr class="border-bottom-color">
+                                  <p class=" text-center mt-3">
+                                      <a (click)="confirmpincode(changeyourpin.value)" class="btn btn-md btn-success">Confirm</a>
+                                  </p>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
